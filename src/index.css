@@ -1,0 +1,12 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    @font-face {
+        font-family: "NetflixSans";
+        font-weight: 200;
+        src: url("/public/fonts/NetflixSans-Medium.woff2") format("woff2"), url("/public/fonts/NetflixSans-Light.otf") format("otf");
+    }
+   
+}
