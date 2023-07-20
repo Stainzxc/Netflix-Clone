@@ -7,6 +7,9 @@ export default {
       fontFamily: {
         sans: ['NetflixSans', ...defaultTheme.fontFamily.sans],
       },
+      backgroundColor: {
+        'transparent': 'transparent',
+      },
     },
   },
   plugins: [],

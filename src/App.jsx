@@ -1,4 +1,5 @@
-import { Button, Card, Checkbox, Input } from "antd";
+import { Button, Card, Checkbox, Input, Tooltip } from "antd";
+import { useState } from "react";
 import netflixLogo from "./assets/images/netflixLogo.svg";
 
 function App() {
@@ -15,21 +16,55 @@ function App() {
                 <h1 className="text-white font-semibold text-4xl py-2">
                   Sign In
                 </h1>
-                <Input
-                  className="rounded-md px-5 py-3 mt-6 bg-[#333] placeholder:text-[#8c8c8c] text-base text-white border-none leading-loose"
-                  placeholder="Email or phone number"
-                />
-                <Input
-                  className="rounded-md px-5 py-3 mt-6 bg-[#333] placeholder:text-[#8c8c8c] text-base text-white border-none leading-loose"
-                  placeholder="Password"
-                />
-                <Button className="bg-[#e50914] py-6 border-none mt-10 w-full text-base font-bold flex justify-center items-center text-white">
+                <div className="relative">
+                  <Input
+                    id="email"
+                    className="peer rounded-md px-5 pt-4 mt-6 bg-[#333] placeholder-transparent text-base text-white border-none leading-loose focus:bg-[#525151]"
+                    placeholder="Email or phone number"
+                    required
+                  />
+                  <label
+                    for="email"
+                    className="absolute left-0 top-7 px-5 text-[#a3a3a3] text-xs peer-placeholder-shown:text-base peer-placeholder-shown:text-[#8c8c8c] transition-all peer-placeholder-shown:top-10 peer-focus:top-7 peer-focus:text-[#a3a3a3] peer-focus:text-xs"
+                  >
+                    Email or phone number
+                  </label>
+                </div>
+                <div className="relative">
+                  <Tooltip placement="bottom" title="Please">
+                    <Input
+                      id="password"
+                      className="peer rounded-md px-5 pt-4 mt-6 bg-[#333] placeholder-transparent text-base text-white border-none leading-loose focus:bg-[#525151]"
+                      placeholder="Password"
+                    />
+                  </Tooltip>
+                  <label
+                    for="password"
+                    className="absolute left-0 top-7 px-5 text-[#a3a3a3] text-xs peer-placeholder-shown:text-base peer-placeholder-shown:text-[#8c8c8c] transition-all peer-placeholder-shown:top-10 peer-focus:top-7 peer-focus:text-[#a3a3a3] peer-focus:text-xs"
+                    required
+                  >
+                    Password
+                  </label>
+                </div>
+                <button
+                  type="submit"
+                  className="bg-[#e50914] py-3 border-none mt-6 rounded-md w-full text-base font-bold flex justify-center items-center text-white hover:text-white"
+                >
                   Sign In
-                </Button>
+                </button>
                 <div className="flex items-center justify-between">
-                  <Checkbox className="mt-2 text-[#8c8c8c]">
+                  <label className="text-[#8c8c8c]">
+                    <input
+                      type="checkbox"
+                      className="mr-1 h-4 w-4 mt-2"
+                      // checked={isChecked}
+                      // onChange={handleCheckboxChange}
+                    />
                     Remember me
-                  </Checkbox>
+                  </label>
+                  {/* <Checkbox className="mt-2 text-[#8c8c8c]">
+                    
+                  </Checkbox> */}
                   <span className="mt-2 text-[#8c8c8c]">Need help?</span>
                 </div>
                 <p className="mt-16 text-[#8c8c8c] text-base">
