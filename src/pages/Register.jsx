@@ -4,6 +4,7 @@ import tvgif from "../assets/images/tvgif.gif";
 import stranger from "../assets/images/stranger.png";
 import kids from "../assets/images/kids.png";
 import { Card, Input } from "antd";
+import { Link } from 'react-router-dom';
 
 export default function Register() {
   return (
@@ -19,12 +20,12 @@ export default function Register() {
                 <option value="">English</option>
                 <option value="">Filipino</option>
               </select>
-              <button
+              <Link to="/login"><button
                 type="submit"
                 className="bg-[#e50914] ml-6 py-2 px-4 border-none rounded-md text-base text-white hover:text-white"
               >
                 Sign In
-              </button>
+              </button></Link>
             </div>
           </div>
           <div className="max-w-[1000px] mx-auto my-52">

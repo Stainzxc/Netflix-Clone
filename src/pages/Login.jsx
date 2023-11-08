@@ -2,6 +2,7 @@ import { Button, Card, Checkbox, Form, Input, Tooltip } from "antd";
 import { useState } from "react";
 import netflixLogo from "../assets/images/netflixLogo.svg";
 import { rules } from "./rules";
+import { Link } from 'react-router-dom';
 
 export default function Login() {
   return (
@@ -74,7 +75,7 @@ export default function Login() {
                   </div>
                   <p className="mt-16 text-[#8c8c8c] text-base">
                     New to Netflix?{" "}
-                    <span className="text-white">Sign up now.</span>
+                    <Link to="/register"><span className="text-white">Sign up now.</span></Link>
                   </p>
                   <p className="mt-4 text-[#8c8c8c]">
                     This page is protected by Google reCAPTCHA to ensure you're
